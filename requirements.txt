@@ -4,3 +4,4 @@ matplotlib
 sklearn
 IPython
 graphviz
+Image

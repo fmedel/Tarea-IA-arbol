@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="T° Suelo (°C) <= 15.5\ngini = 0.4709\nsamples = 100.0%\nvalue = [0.38, 0.62]\nclass = no regar", fillcolor="#399de563"] ;
+1 [label="Humedad Suelo (%) <= 36.5\ngini = 0.3628\nsamples = 72.4%\nvalue = [0.24, 0.76]\nclass = no regar", fillcolor="#399de5af"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="PH Agua <= 13.5\ngini = 0.1244\nsamples = 51.7%\nvalue = [0.07, 0.93]\nclass = no regar", fillcolor="#399de5ed"] ;
+1 -> 2 ;
+3 [label="gini = 0.0\nsamples = 48.3%\nvalue = [0.0, 1.0]\nclass = no regar", fillcolor="#399de5ff"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 3.4%\nvalue = [1.0, 0.0]\nclass = regar", fillcolor="#e58139ff"] ;
+2 -> 4 ;
+5 [label="PH Suelo <= 10.5\ngini = 0.4444\nsamples = 20.7%\nvalue = [0.67, 0.33]\nclass = regar", fillcolor="#e581397f"] ;
+1 -> 5 ;
+6 [label="PH Agua <= 13.0\ngini = 0.4444\nsamples = 10.3%\nvalue = [0.33, 0.67]\nclass = no regar", fillcolor="#399de57f"] ;
+5 -> 6 ;
+7 [label="gini = 0.0\nsamples = 6.9%\nvalue = [0.0, 1.0]\nclass = no regar", fillcolor="#399de5ff"] ;
+6 -> 7 ;
+8 [label="gini = 0.0\nsamples = 3.4%\nvalue = [1.0, 0.0]\nclass = regar", fillcolor="#e58139ff"] ;
+6 -> 8 ;
+9 [label="gini = 0.0\nsamples = 10.3%\nvalue = [1.0, 0.0]\nclass = regar", fillcolor="#e58139ff"] ;
+5 -> 9 ;
+10 [label="T° Suelo Deseada (°C) <= 21.5\ngini = 0.375\nsamples = 27.6%\nvalue = [0.75, 0.25]\nclass = regar", fillcolor="#e58139aa"] ;
+0 -> 10 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+11 [label="gini = 0.0\nsamples = 20.7%\nvalue = [1.0, 0.0]\nclass = regar", fillcolor="#e58139ff"] ;
+10 -> 11 ;
+12 [label="gini = 0.0\nsamples = 6.9%\nvalue = [0.0, 1.0]\nclass = no regar", fillcolor="#399de5ff"] ;
+10 -> 12 ;
+}
