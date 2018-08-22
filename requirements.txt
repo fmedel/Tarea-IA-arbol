@@ -3,5 +3,4 @@ numpy
 matplotlib
 sklearn
 IPython
-io
 graphviz
