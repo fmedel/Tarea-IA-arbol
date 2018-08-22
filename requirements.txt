@@ -1,0 +1,8 @@
+pandas
+numpy 
+os
+matplotlib
+sklearn
+IPython
+io
+graphviz
